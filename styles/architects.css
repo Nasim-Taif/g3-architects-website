@@ -1,8 +1,144 @@
 /* work Sans Font from Googlr Fonts  */
 
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+  /* shared styles  */
+
+  .btn-primary{
+    color: white;
+    font-size: 1.25rem;
+    background-color: #FF900E;
+    border: none;
+    padding: 20px 25px ;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+
 *{
     font-family: 'Lato', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Work Sans', sans-serif;
+}
+
+/* header Styles  */
+
+header{
+    background: rgba(255, 144, 14, 0.10);
+    padding:50px 230px ;
+}
+
+.nav-titel{
+    font-size: 3rem;
+    font-weight: 700px;
+    color: #131313;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > ul {
+    display: flex;
+}
+nav li {
+    list-style: none;
+    margin-right: 30px;
+    font-weight: 500px;
+    font-size: 1rem;
+}
+nav li > a {
+    text-decoration: none;
+    color: #424242;
+
+}
+
+/* banner styles  */
+
+.banner-content{
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.banner-titel{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #131313;
+}
+.banner-description{
+    color: #727272;
+
+}
+
+.banner img{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+
+
+
+/* responsive media queries  */
+/* mobile devices */
+
+@media screen and (max-width:576px) {
+    header{
+        padding:20px;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* medium devices */
+
+@media screen and (min-width:576px) and (max-width:960px) {
+   header{
+    padding:50px;
+   }
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* main styles  */
+main{
+    max-width:1440px;
+    margin:0 auto ;
+}
+/* teams styles */
+
+.teams-container{
+    display: flex;
+    align-items: center;
+
+}
+.teams-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.5rem;
+}
+.teams-content{
+    padding: 0 70px;
+}
+.teams-title{
+    font-size:2.8rem;
+}
+
+.teams-title .quick-list-word {
+   color:#727272 ; 
+   font-weight: 500px;
+}
+
+.teams-title .feature-word{
+    color:#FF900E ;
+    font-weight: 700px;
+}
+.teams-description{
+    color: var(--dark-03, #727272);
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
 }
