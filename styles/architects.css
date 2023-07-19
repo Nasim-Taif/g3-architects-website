@@ -78,35 +78,10 @@ nav li > a {
 }
 
 
-
-
-/* responsive media queries  */
-/* mobile devices */
-
-@media screen and (max-width:576px) {
-    header{
-        padding:20px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
-
-/* medium devices */
-
-@media screen and (min-width:576px) and (max-width:960px) {
-   header{
-    padding:50px;
-   }
-    nav {
-        flex-direction: column;
-    }
-}
-
 /* main styles  */
 main{
     max-width:1440px;
-    margin:0 auto ;
+    margin:100px auto ;
 }
 /* teams styles */
 
@@ -137,8 +112,91 @@ main{
     font-weight: 700px;
 }
 .teams-description{
-    color: var(--dark-03, #727272);
+    color: #727272;
+font-size: 16px;
+
+}
+
+/* facts section styles */
+
+.facts-cards-container{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; ---> aita ashole vul silo deya .align items center shob shomoy sagol er moto mara jabe na */
+}
+
+.facts-cards-container .card{
+    border-radius: 8px;
+border: 1px solid #FF900E;
+text-align: center;
+padding: 40px 30px;
+
+}
+.facts-cards-container .card-starts{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.facts-cards-container .card-title{
+    color:#727272 ;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.teams-description{
+    color: #727272;
 font-size: 16px;
 font-weight: 400;
 line-height: 26px;
+}
+.fact-description{
+    margin-bottom: 50px;    
+}
+
+
+
+/* responsive media queries  */
+/* mobile devices */
+
+@media screen and (max-width:576px) {
+    header{
+        padding:20px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .teams-img-container{
+        grid-template-columns: repeat(1,1fr);
+        gap:5px;
+    }
+    .teams-container,.facts-cards-container  {
+        flex-direction: column;
+      
+    }
+    .teams-content , .facts-card-container{
+        padding: 0 10px;
+    }
+    .facts-card-container{
+        gap:20px;
+    }
+    .facts-card-container .card{
+        margin-top: 10px;
+        
+    }
+
+
+}
+
+/* medium devices */
+
+@media screen and (min-width:576px) and (max-width:960px) {
+   header{
+    padding:50px;
+   }
+    nav , .teams-container {
+        flex-direction: column;
+    }
 }
